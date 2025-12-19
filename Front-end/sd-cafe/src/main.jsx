@@ -11,37 +11,21 @@ import LocationContact from './Components/Location.jsx';
 import Contact from './Components/Contact.jsx';
 
 
-
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />, 
+    element: <App />,
     children: [
-      {
-        path: "",
-        element: <Home />,
-      },
-      {
-        path: "about",
-        element: <About />,
-      },
-      {
-        path: "menu",
-        element: <Menu />,
-      },
-      {
-        path: "location",
-        element: <LocationContact />,
-      },
-      {
-        path: "contact",
-        element: <Contact
-         />,
-      },
+      { path: "", element: <Home /> },
+      { path: "about", element: <About /> },
+      { path: "menu", element: <Menu /> },
+      { path: "location", element: <LocationContact /> },
+      { path: "contact", element: <Contact /> }
     ],
   },
 ]);
 
+
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <RouterProvider router={router} />
+  <RouterProvider router={router} />
 );
